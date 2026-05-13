@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isaac Zaetz — 15446</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0f0f0f;
+      --gray: #555;
+      --light: #f5f7fa;
+      --border: #e5e7eb;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAV */
+    nav {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 700; font-size: 1rem; letter-spacing: -0.2px; }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { font-size: 0.875rem; color: var(--gray); text-decoration: none; }
+    .nav-links a:hover { color: var(--black); }
+
+    /* HERO */
+    .hero {
+      padding: 80px 40px 64px;
+      max-width: 720px;
+    }
+    .hero-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--gray);
+      max-width: 560px;
+    }
+    .collab-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 28px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+    .collab-badge span { font-size: 1rem; }
+
+    /* APPS */
+    .section {
+      padding: 48px 40px 80px;
+      flex: 1;
+    }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .app-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+    .app-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      border-color: #ccc;
+    }
+    .app-card.coming-soon {
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
+    }
+    .app-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+    .app-name {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .app-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 3px;
+      background: var(--light);
+      color: var(--gray);
+      border: 1px solid var(--border);
+    }
+    .app-desc {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--gray);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 24px 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p { font-size: 0.78rem; color: #aaa; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 0.78rem; color: #aaa; text-decoration: none; }
+    .footer-links a:hover { color: var(--gray); }
+
+    @media (max-width: 600px) {
+      nav, .hero, .section, footer { padding-left: 24px; padding-right: 24px; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">15446</div>
+    <div class="nav-links">
+      <a href="mailto:i@15446.com">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-label">15446 LLC</div>
+    <h1>Software built by Isaac Zaetz.</h1>
+    <p>A portfolio of tools designed to make complex work simpler — starting with accounting and finance, expanding from there.</p>
+    <div class="collab-badge">
+      <span>⚡</span> Built in collaboration with Claude
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Apps</div>
+    <div class="apps-grid">
+
+      <a class="app-card" href="/sentri">
+        <div class="app-icon">S</div>
+        <div class="app-name">
+          Sentri
+          <span class="app-tag">Finance</span>
+        </div>
+        <p class="app-desc">Books health monitoring for QuickBooks Online. Tracks reconciliation status, unreconciled gaps, and account health across your entire chart of accounts.</p>
+      </a>
+
+      <div class="app-card coming-soon">
+        <div class="app-icon" style="background:#e5e7eb; color:#aaa">+</div>
+        <div class="app-name">More coming soon</div>
+        <p class="app-desc">New tools in development.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 15446 LLC · New York</p>
+    <div class="footer-links">
+      <a href="/sentri/privacy-policy">Sentri Privacy Policy</a>
+      <a href="/sentri/terms">Sentri Terms</a>
+      <a href="mailto:i@15446.com">i@15446.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
