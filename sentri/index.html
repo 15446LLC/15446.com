@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentri — Books Health for QuickBooks Online</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0f0f0f;
+      --gray: #555;
+      --light: #f5f7fa;
+      --border: #e5e7eb;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-left { display: flex; align-items: center; gap: 12px; }
+    .nav-parent { font-size: 0.875rem; color: var(--gray); text-decoration: none; }
+    .nav-parent:hover { color: var(--black); }
+    .nav-sep { color: var(--border); font-size: 0.875rem; }
+    .nav-logo { font-weight: 700; font-size: 1rem; }
+    .nav-links a { font-size: 0.875rem; color: var(--gray); text-decoration: none; }
+    .nav-links a:hover { color: var(--black); }
+
+    .hero {
+      padding: 80px 40px 64px;
+      max-width: 760px;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gray);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--gray);
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+    .coming-soon {
+      display: inline-block;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gray);
+    }
+
+    .section {
+      padding: 48px 40px;
+      border-top: 1px solid var(--border);
+    }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 32px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+    }
+    .feature {
+      padding: 24px;
+      background: var(--light);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .feature-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+    .feature-desc {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--gray);
+    }
+
+    .module-section {
+      padding: 48px 40px;
+      border-top: 1px solid var(--border);
+    }
+    .module-card {
+      max-width: 600px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .module-header {
+      padding: 16px 24px;
+      background: var(--black);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .module-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: rgba(255,255,255,0.15);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    th {
+      padding: 10px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--gray);
+      background: var(--light);
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+      line-height: 1.5;
+    }
+    tr:last-child td { border-bottom: none; }
+    .dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+    .green { background: #28a745; }
+    .yellow { background: #ffc107; }
+    .red { background: #dc3545; }
+
+    .roadmap {
+      padding: 48px 40px;
+      border-top: 1px solid var(--border);
+    }
+    .roadmap-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 760px;
+    }
+    .roadmap-item {
+      font-size: 0.8rem;
+      padding: 5px 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--gray);
+    }
+
+    .legal-section {
+      padding: 40px 40px 32px;
+      border-top: 1px solid var(--border);
+    }
+    .legal-links {
+      display: flex;
+      gap: 24px;
+    }
+    .legal-links a {
+      font-size: 0.85rem;
+      color: var(--gray);
+      text-decoration: none;
+    }
+    .legal-links a:hover { color: var(--black); text-decoration: underline; }
+
+    footer {
+      padding: 24px 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: auto;
+    }
+    footer p { font-size: 0.78rem; color: #aaa; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 0.78rem; color: #aaa; text-decoration: none; }
+    .footer-links a:hover { color: var(--gray); }
+
+    @media (max-width: 600px) {
+      nav, .hero, .section, .module-section, .roadmap, .legal-section, footer { padding-left: 24px; padding-right: 24px; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a class="nav-parent" href="/">15446</a>
+      <span class="nav-sep">/</span>
+      <span class="nav-logo">Sentri</span>
+    </div>
+    <div class="nav-links">
+      <a href="mailto:i@15446.com">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">Finance · QuickBooks Online</div>
+    <h1>Books health monitoring for QuickBooks Online.</h1>
+    <p>Sentri connects to your QuickBooks account and gives you a clear view of your books' health — starting with reconciliation, expanding from there.</p>
+    <div class="coming-soon">Coming to the QuickBooks App Store</div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Module 1 — Reconciliation Health</div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-name">Last Reconciled Date</div>
+        <p class="feature-desc">See when each account was last reconciled, with color-coded health indicators based on how recent it was.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">Reconciliation Integrity</div>
+        <p class="feature-desc">Detect whether a completed reconciliation has been broken after the fact — a common source of unexplained discrepancies.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">Unreconciled Transaction Gaps</div>
+        <p class="feature-desc">Identify transactions dated before the last reconciliation date that were never reconciled — a sign of retroactive edits.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">Sum & Earliest Date</div>
+        <p class="feature-desc">See the total dollar amount and earliest date of unreconciled transactions, so you know the scope of the issue at a glance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="module-section">
+    <div class="section-label">Health Indicators</div>
+    <div class="module-card">
+      <div class="module-header">
+        Reconciliation Health
+        <span class="module-badge">Per Account</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Indicator</th>
+            <th>Green</th>
+            <th>Yellow</th>
+            <th>Red</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Last reconciled date</td>
+            <td><span class="dot green"></span>Within 30 days</td>
+            <td><span class="dot yellow"></span>31–90 days</td>
+            <td><span class="dot red"></span>90+ days or never</td>
+          </tr>
+          <tr>
+            <td>Unreconciled gaps before last rec</td>
+            <td><span class="dot green"></span>None</td>
+            <td><span class="dot yellow"></span>Within 30 days</td>
+            <td><span class="dot red"></span>30+ days before</td>
+          </tr>
+          <tr>
+            <td>Sum of unreconciled transactions</td>
+            <td colspan="3" style="color:var(--gray)">Displayed for all accounts</td>
+          </tr>
+          <tr>
+            <td>Earliest unreconciled date</td>
+            <td colspan="3" style="color:var(--gray)">Displayed for all accounts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <div class="section-label">Future Modules</div>
+    <div class="roadmap-list">
+      <span class="roadmap-item">AR Health</span>
+      <span class="roadmap-item">AP Health</span>
+      <span class="roadmap-item">Uncategorized Transactions</span>
+      <span class="roadmap-item">Chart of Accounts Quality</span>
+      <span class="roadmap-item">Payroll Liability Health</span>
+      <span class="roadmap-item">Journal Entry Quality</span>
+      <span class="roadmap-item">Bank Feed Health</span>
+      <span class="roadmap-item">Closing & Period Discipline</span>
+      <span class="roadmap-item">Fixed Assets & Depreciation</span>
+      <span class="roadmap-item">Tax Line Mapping</span>
+    </div>
+  </div>
+
+  <div class="legal-section">
+    <div class="section-label">Legal</div>
+    <div class="legal-links">
+      <a href="/sentri/privacy-policy">Privacy Policy</a>
+      <a href="/sentri/terms">Terms of Service</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 15446 LLC · New York</p>
+    <div class="footer-links">
+      <a href="/">15446.com</a>
+      <a href="mailto:i@15446.com">i@15446.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
