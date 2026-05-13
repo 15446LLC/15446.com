@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentri — Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a1a;
+      padding: 48px 24px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+      padding: 48px 56px;
+    }
+    .brand { font-size: 1.1rem; font-weight: 700; color: #1a1a1a; text-decoration: none; display: inline-block; margin-bottom: 32px; }
+    h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; }
+    .meta { font-size: 0.82rem; color: #888; margin-bottom: 36px; }
+    h2 { font-size: 1rem; font-weight: 700; margin-top: 32px; margin-bottom: 10px; color: #1a1a1a; }
+    p { font-size: 0.9rem; line-height: 1.7; color: #333; margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 10px; }
+    ul li { font-size: 0.9rem; line-height: 1.7; color: #333; margin-bottom: 4px; }
+    .divider { border: none; border-top: 1px solid #eee; margin: 36px 0; }
+    a { color: #0052cc; }
+    @media (max-width: 600px) {
+      .container { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="brand" href="/">Sentri</a>
+    <h1>Privacy Policy</h1>
+    <p class="meta">15446 LLC &nbsp;·&nbsp; Effective May 13, 2026 &nbsp;·&nbsp; <a href="mailto:i@15446.com">i@15446.com</a></p>
+
+    <h2>1. Overview</h2>
+    <p>Sentri is a books health monitoring tool that connects to your QuickBooks Online account via OAuth 2.0 and displays reconciliation health data. This policy explains what data we access, how we use it, and your rights as a user.</p>
+
+    <h2>2. Data We Access</h2>
+    <p>When you connect your QuickBooks Online account, Sentri accesses the following data in real time:</p>
+    <ul>
+      <li>Account names and types (e.g., bank accounts, credit card accounts)</li>
+      <li>Account reconciliation dates</li>
+      <li>Transaction data necessary to compute reconciliation health metrics</li>
+    </ul>
+    <p>We access this data in real time from QuickBooks. We do not store your QuickBooks financial data on our servers beyond the duration of your active session.</p>
+
+    <h2>3. Data We Store</h2>
+    <p>Sentri stores only the minimum data required to operate:</p>
+    <ul>
+      <li><strong>OAuth tokens</strong> — an access token and refresh token used to maintain your connection to QuickBooks. These are held in your server-side session and are not written to a persistent database.</li>
+      <li><strong>QuickBooks Realm ID</strong> — a unique identifier for your QuickBooks company, used to direct API requests to the correct account.</li>
+    </ul>
+
+    <h2>4. How We Use Your Data</h2>
+    <p>We use your QuickBooks data solely to display the Sentri reconciliation health dashboard to you. We do not:</p>
+    <ul>
+      <li>Sell your data to any third party</li>
+      <li>Share your data with third parties beyond what is necessary to operate the service</li>
+      <li>Use your data for advertising or marketing purposes</li>
+      <li>Train machine learning or AI models on your data</li>
+    </ul>
+
+    <h2>5. Third-Party Services</h2>
+    <p>Sentri relies on the following third-party service:</p>
+    <ul>
+      <li><strong>Intuit Inc. (QuickBooks Online)</strong> — the data source and OAuth 2.0 provider. Your use of QuickBooks Online is governed by <a href="https://www.intuit.com/privacy/statement/" target="_blank">Intuit's Privacy Policy</a> and terms of service.</li>
+    </ul>
+
+    <h2>6. Data Retention</h2>
+    <p>Your session data (OAuth tokens and Realm ID) expires when you disconnect from Sentri or your session ends. We do not maintain a persistent record of your QuickBooks data.</p>
+
+    <h2>7. Security</h2>
+    <p>Sentri uses OAuth 2.0 to access your QuickBooks data. We never see or store your QuickBooks username or password. Access tokens are stored in server-side sessions and are scoped only to the permissions you granted during authorization.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>You may disconnect Sentri from your QuickBooks account at any time by clicking "Disconnect" within the app. You may also revoke access directly from your QuickBooks account settings under connected apps. Disconnecting immediately terminates our ability to access your data.</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>Sentri is not directed to individuals under the age of 18 and we do not knowingly collect data from minors.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Material changes will be reflected by an updated effective date above. Continued use of Sentri after changes constitutes acceptance of the revised policy.</p>
+
+    <hr class="divider" />
+
+    <h2>Contact</h2>
+    <p>15446 LLC &nbsp;·&nbsp; New York<br /><a href="mailto:i@15446.com">i@15446.com</a></p>
+    <p style="margin-top:10px;">This policy is governed by the laws of the State of New York.</p>
+  </div>
+</body>
+</html>
