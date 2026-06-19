@@ -81,6 +81,23 @@
       font-weight: 600;
       color: var(--gray);
     }
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .cta-button {
+      display: inline-block;
+      background: var(--black);
+      color: #fff;
+      border-radius: 6px;
+      padding: 12px 22px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .cta-button:hover { opacity: 0.85; }
 
     .section {
       padding: 48px 40px;
@@ -249,7 +266,10 @@
     <div class="hero-tag">Finance · QuickBooks Online</div>
     <h1>Books health monitoring for QuickBooks Online.</h1>
     <p>Sentri connects to your QuickBooks account and gives you a clear view of your books' health — starting with reconciliation, expanding from there.</p>
-    <div class="coming-soon">Coming to the QuickBooks App Store</div>
+    <div class="hero-ctas">
+      <a class="cta-button" href="https://sentri-hefh.onrender.com/connect">Connect to QuickBooks →</a>
+      <div class="coming-soon">Coming to the QuickBooks App Store</div>
+    </div>
   </div>
 
   <div class="section">
@@ -261,7 +281,7 @@
       </div>
       <div class="feature">
         <div class="feature-name">Reconciliation Integrity</div>
-        <p class="feature-desc">Detect whether a completed reconciliation has been broken after the fact — a common source of unexplained discrepancies.</p>
+        <p class="feature-desc">If a previously-reconciled transaction is later edited or un-reconciled, it surfaces as an unreconciled gap before the last reconciliation date — catching broken reconciliations as part of the same check.</p>
       </div>
       <div class="feature">
         <div class="feature-name">Unreconciled Transaction Gaps</div>
@@ -270,6 +290,42 @@
       <div class="feature">
         <div class="feature-name">Sum & Earliest Date</div>
         <p class="feature-desc">See the total dollar amount and earliest date of unreconciled transactions, so you know the scope of the issue at a glance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Module 2 — Undeposited Funds Hygiene</div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-name">Balance Check</div>
+        <p class="feature-desc">Checks the Undeposited Funds account balance first — if it's zero, there's nothing sitting unswept and no further scan is needed.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">Unswept Payments</div>
+        <p class="feature-desc">When the balance is nonzero, finds the specific payments that haven't been matched to a bank deposit yet, misstating cash on the balance sheet until they're swept in.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">Aged by Severity</div>
+        <p class="feature-desc">Buckets unswept payments by age — under 30 days, 30 days to 12 months, and over 12 months — so a brand-new payment doesn't read the same as a year-old one.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Module 3 — Unapplied Payments &amp; Credits</div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-name">Customer Side</div>
+        <p class="feature-desc">Payments and credit memos not yet applied to an invoice — money received but still sitting as an unapplied credit, overstating open AR.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">Vendor Side</div>
+        <p class="feature-desc">Vendor credits not applied to a bill, and vendor payments with no linked bill — understating what's actually owed or leaving cash unaccounted for.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">Aged by Severity</div>
+        <p class="feature-desc">Same age-bucketed approach as Module 2 — a few recent days is normal processing lag, anything over 12 months is a real hygiene problem.</p>
       </div>
     </div>
   </div>
@@ -319,16 +375,19 @@
   <div class="roadmap">
     <div class="section-label">Future Modules</div>
     <div class="roadmap-list">
-      <span class="roadmap-item">AR Health</span>
-      <span class="roadmap-item">AP Health</span>
+      <span class="roadmap-item">Voided / Deleted Transaction Monitoring</span>
+      <span class="roadmap-item">Cross-Report Consistency Checks</span>
       <span class="roadmap-item">Uncategorized Transactions</span>
       <span class="roadmap-item">Chart of Accounts Quality</span>
-      <span class="roadmap-item">Payroll Liability Health</span>
+      <span class="roadmap-item">Duplicate Transactions</span>
       <span class="roadmap-item">Journal Entry Quality</span>
+      <span class="roadmap-item">AP/AR Aging</span>
       <span class="roadmap-item">Bank Feed Health</span>
       <span class="roadmap-item">Closing & Period Discipline</span>
-      <span class="roadmap-item">Fixed Assets & Depreciation</span>
+      <span class="roadmap-item">Negative Balance Detection</span>
+      <span class="roadmap-item">Payroll Liability Health</span>
       <span class="roadmap-item">Tax Line Mapping</span>
+      <span class="roadmap-item">Fixed Assets & Depreciation</span>
     </div>
   </div>
 
