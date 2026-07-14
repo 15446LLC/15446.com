@@ -59,7 +59,7 @@
   <div class="container">
     <a class="brand" href="/substrix">Substrix</a>
     <h1>Privacy Policy</h1>
-    <p class="meta">15446 LLC &nbsp;·&nbsp; Effective May 13, 2026 &nbsp;·&nbsp; <a href="mailto:i@15446.com">i@15446.com</a></p>
+    <p class="meta">15446 LLC &nbsp;·&nbsp; Effective May 13, 2026 &nbsp;·&nbsp; Last updated July 14, 2026 &nbsp;·&nbsp; <a href="mailto:i@15446.com">i@15446.com</a></p>
 
     <h2>1. Overview</h2>
     <p>Substrix is a books health monitoring tool that connects to your QuickBooks Online account via OAuth 2.0 and displays reconciliation health data. This policy explains what data we access, how we use it, and your rights as a user.</p>
@@ -74,11 +74,14 @@
     <p>We access this data in real time from QuickBooks. We do not store your QuickBooks financial data on our servers beyond the duration of your active session.</p>
 
     <h2>3. Data We Store</h2>
-    <p>Substrix stores only the minimum data required to operate:</p>
+    <p>Substrix stores only the minimum data required to operate the service:</p>
     <ul>
-      <li><strong>OAuth tokens</strong> — an access token and refresh token used to maintain your connection to QuickBooks. These are held in your server-side session and are not written to a persistent database.</li>
+      <li><strong>OAuth tokens</strong> — an access token and refresh token used to maintain your connection to QuickBooks. These are held in a server-side session store and are deleted when you disconnect or your session expires.</li>
       <li><strong>QuickBooks Realm ID</strong> — a unique identifier for your QuickBooks company, used to direct API requests to the correct account.</li>
+      <li><strong>Company profile information</strong> — your company's name, contact email address, and city/state, as provided by QuickBooks when you connect. We use this to know who our users are and to be able to contact you about the service.</li>
+      <li><strong>Usage and error logs</strong> — timestamps of events such as connecting, disconnecting, and loading the dashboard, along with technical error details. These help us operate, support, and improve the service.</li>
     </ul>
+    <p>We do not store your accounting records — transactions, balances, customer or vendor lists, and report data are read from QuickBooks in real time and are not retained after your dashboard is generated.</p>
 
     <h2>4. How We Use Your Data</h2>
     <p>We use your QuickBooks data solely to display the Substrix reconciliation health dashboard to you. We do not:</p>
@@ -96,13 +99,14 @@
     </ul>
 
     <h2>6. Data Retention</h2>
-    <p>Your session data (OAuth tokens and Realm ID) expires when you disconnect from Substrix or your session ends. We do not maintain a persistent record of your QuickBooks data.</p>
+    <p>OAuth tokens expire when you disconnect from Substrix or your session ends. Company profile information and usage logs are retained while you remain a user of the service so we can operate and support it. You may request deletion of this information at any time (see Your Rights below). We do not maintain a persistent record of your QuickBooks accounting data.</p>
 
     <h2>7. Security</h2>
     <p>Substrix uses OAuth 2.0 to access your QuickBooks data. We never see or store your QuickBooks username or password. Access tokens are stored in server-side sessions and are scoped only to the permissions you granted during authorization.</p>
 
     <h2>8. Your Rights</h2>
     <p>You may disconnect Substrix from your QuickBooks account at any time by clicking "Disconnect" within the app. You may also revoke access directly from your QuickBooks account settings under connected apps. Disconnecting immediately terminates our ability to access your data.</p>
+    <p>You may also request a copy or deletion of the information we store about your company (profile information and usage logs) by emailing <a href="mailto:i@15446.com">i@15446.com</a>. We will honor deletion requests within 30 days.</p>
 
     <h2>9. Children's Privacy</h2>
     <p>Substrix is not directed to individuals under the age of 18 and we do not knowingly collect data from minors.</p>
